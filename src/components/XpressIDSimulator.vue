@@ -17,6 +17,7 @@
         :src="iframeUrl"
         width="100%"
         height="650"
+        allow="camera; microphone; fullscreen; geolocation"
         style="border: none"
       ></iframe>
     </div>
@@ -35,19 +36,40 @@ const token = ref("");
 const iframeUrl = ref("");
 const result = ref(null);
 
-const loadIframe = () => {
+const requestPermissions = async () => {
+  try {
+    console.log("Solicitando permisos de cámara y micrófono...");
+
+    await navigator.mediaDevices.getUserMedia({
+      video: true,
+      audio: true,
+    });
+
+    console.log("Permisos otorgados correctamente.");
+    return true;
+  } catch (err) {
+    console.error("Permisos rechazados:", err);
+    return false;
+  }
+};
+
+const loadIframe = async () => {
+  const granted = await requestPermissions();
+
+  if (!granted) {
+    alert("Debes otorgar los permisos de cámara y micrófono para continuar");
+    return;
+  }
   // Agregamos mode=sandbox para que simule INE + biometría
   iframeUrl.value = `https://xpressid-web-work.us.veri-das.com/v3/?access_token=${token.value}&mode=sandbox`;
   result.value = null;
 };
 
 const handleMessage = (event) => {
-  // Solo escuchar mensajes que vengan de dominios Veridas
   if (!event.origin.includes("veri-das.com")) return;
 
   console.log("Mensaje desde XpressID:", event.data);
 
-  // El iframe suele mandar eventos tipo { event: "finish", payload: {...} }
   if (event.data?.event === "finish") {
     result.value = event.data.payload;
   } else if (event.data?.event === "error") {

@@ -1,16 +1,12 @@
 <script setup>
-import HelloWorld from "./components/HelloWorld.vue";
+import ProcesoSteps from "./components/ProcesoSteps.vue";
 import XpressIDSimulator from "./components/XpressIDSimulator.vue";
 </script>
 
 <template>
   <div>
-    <XpressIDSimulator />
+    <ProcesoSteps />
   </div>
 </template>
 
-<style scoped>
-body {
-  margin: 0;
-}
-</style>
+<style scoped></style>
