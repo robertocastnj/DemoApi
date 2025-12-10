@@ -5,7 +5,7 @@ import XpressIDSimulator from "./components/XpressIDSimulator.vue";
 
 <template>
   <div>
-    <ProcesoSteps />
+    <XpressIDSimulator />
   </div>
 </template>
 

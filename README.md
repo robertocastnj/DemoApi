@@ -1,5 +1,33 @@
-# Vue 3 + Vite
+# 📄 **README – XpressID Simulator (Vue + PHP Proxy)**
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Requisitos
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+### Backend
+
+- PHP 8+
+- Extensión `curl` habilitada
+
+### Frontend
+
+- Node.js 18+
+- npm, yarn o pnpm
+
+---
+
+## Instalación
+
+### 1. Clonar el repositorio
+
+### 2. Instalar dependencias del frontend
+
+### 3. Configurar backend PHP
+
+## Ejecutar el backend PHP
+
+Desde la carpeta raíz donde está `/public`:
+
+php -S localhost:8000 -t public
+
+## Ejecutar el frontend Vue
+
+npm run dev
