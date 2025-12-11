@@ -25,9 +25,12 @@
 import { ref, onMounted, onBeforeUnmount } from "vue";
 
 async function getToken() {
-  const res = await fetch("http://localhost:8000/api_veridas/token.php", {
-    method: "POST",
-  });
+  const res = await fetch(
+    "http://localhost/DemoApi/public/api_veridas/token.php",
+    {
+      method: "POST",
+    }
+  );
 
   const text = await res.text();
   console.log("RAW RESPONSE FROM PHP:", text);

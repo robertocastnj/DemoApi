@@ -2,15 +2,15 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+require_once __DIR__ . "/env_loader.php";
+loadEnv(__DIR__ . "/.env");
+
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 
-// API KEY 
-$apiKey = "XSPW5n62_W8AdBWMUYPCEVSi8emECebkeQQ3zE5zHHg";
-
-// URL
-$xpressidUrl = "https://api-work.us.veri-das.com/xpressid/api/v3/token";
+$apiKey = $_ENV["XPRESSID_API_KEY"];
+$xpressidUrl = $_ENV["XPRESSID_URL"];
 
 // CONFIG_DATA de postman
 $payload = [
@@ -22,7 +22,7 @@ $payload = [
                 "confirmProcess" => true
             ],
             "stages" => [
-                "document"
+                "selfie","document"
             ]
         ]
     ]
