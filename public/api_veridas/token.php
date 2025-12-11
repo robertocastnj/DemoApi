@@ -1,14 +1,16 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 
 require_once __DIR__ . "/env_loader.php";
 loadEnv(__DIR__ . "/.env");
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 
+// VARS DEL ENV 
 $apiKey = $_ENV["XPRESSID_API_KEY"];
 $xpressidUrl = $_ENV["XPRESSID_URL"];
 
@@ -35,13 +37,13 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
 
 curl_setopt_array($ch, [
-    CURLOPT_URL => $xpressidUrl,
+    CURLOPT_URL => $xpressidUrl,  
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_POST => true,
     CURLOPT_POSTFIELDS => json_encode($payload),
     CURLOPT_HTTPHEADER => [
         "Content-Type: application/json",
-        "apikey: $apiKey"
+        "apikey: $apiKey" 
     ]
 ]);
 
@@ -69,4 +71,5 @@ echo json_encode([
     "access_token" => $data["access_token"]
 ]);
 exit;
+
 ?>

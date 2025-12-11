@@ -23,14 +23,14 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from "vue";
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
+const iframeBase = import.meta.env.VITE_IFRAME_URL;
+const mode = import.meta.env.VITE_MODE;
 
 async function getToken() {
-  const res = await fetch(
-    "http://localhost/DemoApi/public/api_veridas/token.php",
-    {
-      method: "POST",
-    }
-  );
+  const res = await fetch(`${backendUrl}/api_veridas/token.php`, {
+    method: "POST",
+  });
 
   const text = await res.text();
   console.log("RAW RESPONSE FROM PHP:", text);
@@ -79,7 +79,7 @@ const loadIframe = async () => {
 
   token.value = generatedToken;
 
-  iframeUrl.value = `https://xpressid-web-work.us.veri-das.com/v3/?access_token=${generatedToken}&mode=sandbox`;
+  iframeUrl.value = `${iframeBase}?access_token=${generatedToken}&mode=${mode}`;
   result.value = null;
 };
 
