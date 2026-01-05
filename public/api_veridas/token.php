@@ -10,48 +10,50 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 
-// VARS DEL ENV 
-$apiKey = $_ENV["XPRESSID_API_KEY"];
-$xpressidUrl = $_ENV["XPRESSID_URL"];
+// ENV
+$apiKey   = $_ENV["XPRESSID_API_KEY"];
+$tokenUrl = $_ENV["XPRESSID_URL"]; // /api/v3/token
 
-// CONFIG_DATA de postman
-$payload = [
-    "data" => [
-        "platform" => "web",
-        "operationMode" => "idv",
-        "flowSetup" => [
-            "core" => [
-                "confirmProcess" => true
-            ],
-            "stages" => [
-                "selfie","document"
-            ]
-        ]
+// CONFIG_DATA (igual que Postman)
+$configData = [
+    "platform" => "web",
+    "operationMode" => "idv",
+    "flowSetup" => [
+        "core" => [
+            "confirmProcess" => true
+        ],
+        "stages" => ["selfie", "document"]
     ]
 ];
 
-$ch = curl_init();
+// cURL init
+$ch = curl_init($tokenUrl);
 
-// evita error SSL porque esta trayendo problemas
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+// multipart/form-data
+$postFields = [
+    'data'   => json_encode($configData),
+
+    'texts'  => new CURLFile(__DIR__ . '/xpressid/texts/es.json', 'application/json'),
+    'medias' => new CURLFile(__DIR__ . '/xpressid/medias/media.json', 'application/json'),
+    'styles' => new CURLFile(__DIR__ . '/xpressid/styles/styles.json', 'application/json'),
+];
 
 curl_setopt_array($ch, [
-    CURLOPT_URL => $xpressidUrl,  
-    CURLOPT_RETURNTRANSFER => true,
     CURLOPT_POST => true,
-    CURLOPT_POSTFIELDS => json_encode($payload),
+    CURLOPT_POSTFIELDS => $postFields,
+    CURLOPT_RETURNTRANSFER => true,
     CURLOPT_HTTPHEADER => [
-        "Content-Type: application/json",
-        "apikey: $apiKey" 
-    ]
+    'apikey: ' . $apiKey
+],
+
+    CURLOPT_SSL_VERIFYPEER => false,
+    CURLOPT_SSL_VERIFYHOST => false,
 ]);
 
 $response = curl_exec($ch);
-$error = curl_error($ch);
 
-if ($error) {
-    echo json_encode(["php_error" => $error]);
+if ($response === false) {
+    echo json_encode(["curl_error" => curl_error($ch)]);
     exit;
 }
 
@@ -61,8 +63,8 @@ $data = json_decode($response, true);
 
 if (!isset($data["access_token"])) {
     echo json_encode([
-        "token_error" => "La API NO regresó access_token",
-        "raw" => $data
+        "token_error" => "La API no regresó access_token",
+        "raw_response" => $data
     ]);
     exit;
 }
@@ -70,6 +72,3 @@ if (!isset($data["access_token"])) {
 echo json_encode([
     "access_token" => $data["access_token"]
 ]);
-exit;
-
-?>

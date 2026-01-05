@@ -1,0 +1,561 @@
+{
+  "qr": {
+    "cancelledModal": {
+      "bodyText": "Ha cancelado el proceso de verificación desde su dispositivo móvil. Podrá volver a intentarlo desde la página principal.",
+      "button": "Aceptar",
+      "title": "Proceso cancelado"
+    },
+    "continueDesktopButton": "Continuar desde el navegador",
+    "errorModal": {
+      "bodyText": "Ha ocurrido un error mientras realizaba el proceso desde su dispositivo móvil, no se puede continuar.",
+      "button": "Aceptar",
+      "title": "Ha ocurrido un error"
+    },
+    "mobileProcessModal": {
+      "bodyText": "El proceso de verificación de identidad se está realizando desde su dispositivo móvil. Sigue las indicaciones para completar el proceso.",
+      "title": "Continúe en su móvil"
+    },
+    "subtitle": "Para una experiencia óptima, le recomendamos que realice el proceso desde su smartphone",
+    "successModal": {
+      "bodyText": "El proceso ha finalizado satisfactoriamente desde su dispositivo móvil.",
+      "button": "Aceptar",
+      "title": "El proceso se ha realizado con éxito"
+    },
+    "title": "Le animamos a usar su smartphone",
+    "qrDescriptionText": "Escanee el QR para seguir el proceso desde su móvil",
+    "qrMediaAltText": "Imagen del QR que se debe escanear para continuar el proceso en el móvil."
+  },
+  "common": {
+    "closeButtonAltText": "Salir del proceso",
+    "exitConfirmationModal": {
+      "continueButton": "No, continuar",
+      "leaveButton": "Salir",
+      "subtitle": "Si sales ahora, perderás el progreso realizado.",
+      "title": "¿Seguro que quieres salir del proceso?"
+    },
+    "logoAltText": "Logo de Veridas",
+    "modals": {
+      "closeIconAltText": "Cerrar"
+    },
+    "helpButton": "Ayuda"
+  },
+  "errorModals": {
+    "connection": {
+      "bodyText": "Ha ocurrido un error de conexión, por favor, inténtalo de nuevo.",
+      "title": "Error de conexión"
+    },
+    "document": {
+      "generic": {
+        "bodyText": "Ha ocurrido un error en la captura del documento.",
+        "title": "Ha ocurrido un error"
+      },
+      "obverse": {
+        "bodyText": "Ha ocurrido un error en la captura de la parte frontal del documento.",
+        "title": "Error en la captura de la parte frontal"
+      },
+      "reverse": {
+        "bodyText": "Ha ocurrido un error en la captura de la parte trasera del documento.",
+        "title": "Error en la captura de la parte trasera"
+      }
+    },
+    "generic": {
+      "bodyText": "Ha ocurrido un error durante la verificación, inténtalo más tarde.",
+      "title": "Ha ocurrido un error"
+    },
+    "selfie": {
+      "bodyText": "Ha ocurrido un error en la captura de la selfie.",
+      "title": "Ha ocurrido un error"
+    },
+    "video": {
+      "bodyText": "Ha ocurrido un error en la grabación del video.",
+      "title": "Ha ocurrido un error"
+    }
+  },
+  "esign": {
+    "cancelButton": "Cancelar",
+    "checkboxText": "He leído y acepto los",
+    "checkboxTextLink": "Términos y condiciones",
+    "inputLabel": "Nombre o iniciales",
+    "inputPlaceholder": "Ej. Ana P. o Ana Pérez",
+    "inputTitle": "Datos de firma:",
+    "signButton": "Firmar",
+    "subtitle": "Firma tus documentos de manera fácil y segura mediante el uso de biometría.",
+    "pdfViewerError": "Ha ocurrido un error al cargar el PDF. Descárgalo para verlo en otra aplicación.",
+    "zoomOutButtonAltText": "Alejar",
+    "zoomInButtonAltText": "Ampliar",
+    "downloadButtonAltText": "Descargar PDF",
+    "termsModal": {
+      "acceptButton": "Aceptar",
+      "bodyText": "Aquí van sus términos y condiciones.",
+      "cancelButton": "Rechazar",
+      "title": "Términos y condiciones"
+    },
+    "title": "Firme aquí"
+  },
+  "loading": {
+    "subtitle": "El proceso está en marcha, espere unos instantes",
+    "title": "Cargando...",
+    "altText": "",
+    "document": {
+      "altText": "",
+      "subtitle": "Por favor, espere mientras procesamos la información.",
+      "title": "Verificando tu documento..."
+    },
+    "selfie": {
+      "altText": "",
+      "subtitle": "Por favor, espere mientras procesamos la imagen.",
+      "title": "Validando imagen..."
+    },
+    "video": {
+      "altText": "",
+      "subtitle": "Por favor, espere mientras procesamos la información.",
+      "title": "Analizando el vídeo de verificación..."
+    }
+  },
+  "processResult": {
+    "error": {
+      "mediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+      "subtitle": "Ha ocurrido un error durante el proceso de verificación de identidad y no se puede continuar",
+      "title": "¡Ups! Algo ha ido mal"
+    },
+    "success": {
+      "mediaAltText": "Imagen de éxito de dos personas chocándose la mano.",
+      "subtitle": "Su identidad se ha verificado correctamente.",
+      "title": "Proceso completado con éxito"
+    }
+  },
+  "document": [
+    {
+      "step": 1,
+      "documentSelector": {
+        "countryInputLabel": "Seleccione un país",
+        "countryInputPlaceholder": "Todos los países",
+        "countrySelectorTitle": "¿A qué país pertenece su documento?",
+        "documentType": {
+          "anyIdCard": "Documentos de identificación",
+          "cartaceo": "Cartaceo",
+          "cercu": "Permiso Verde (CERCU)",
+          "drivingLicense": "Permiso de conducir",
+          "fm3": "FM3 (permiso de residencia)",
+          "healthCard": "Tarjeta sanitaria",
+          "idCard": "Documento de identificación",
+          "others": "Otros documentos",
+          "passport": "Pasaporte",
+          "pinkPaper": "Carné rosa en papel",
+          "professionalCard": "Permiso de trabajo"
+        },
+        "documentTypeTitle": "¿Qué tipo de documento es?",
+        "singleCountrySubtitle": "Solo se admiten documentos de {{COUNTRY}}",
+        "singleCountryTitle": "Elija el tipo de documento",
+        "title": "Elija su país y tipo de documento",
+        "noMatchingResultsText": "No se han encontrado resultados"
+      },
+      "autoclassificationSelector": {
+        "documentType": {
+          "anyIdCard": "Documentos de identificación",
+          "passport": "Pasaporte"
+        },
+        "documentTypeTitle": "¿Qué tipo de documento es?",
+        "title": "Elija una de estas opciones"
+      },
+      "capture": {
+        "cameraLoading": {
+          "title": "Cargando...",
+          "altText": ""
+        },
+        "feedback": {
+          "centerDocument": "Centre el documento",
+          "getCloser": "Acerque el documento",
+          "manual": "Toque la pantalla para capturar",
+          "moveAway": "Aleje el documento",
+          "staySteady": "Manténgase estable",
+          "successfulCapture": "Captura realizada correctamente. "
+        },
+        "obverse": {
+          "subtitle": "Muestre la parte delantera del documento a cámara.",
+          "title": "Parte delantera",
+          "helpModal": {
+            "desktopMediaAltText": "Persona mostrando la parte delantera del documento a la cámara del ordenador",
+            "mobileMediaAltText": "Persona mostrando la parte delantera del documento a la cámara trasera del móvil",
+            "subtitle": "Para realizar la captura de documento correctamente, siga las siguientes indicaciones:<br />- Coloque el documento de forma centrada en el marco.<br />- Evite que el documento presente reflejos.<br />- Evite tapar datos con el dedo o de otra forma.<br />- Asegúrese de estar en un espacio bien iluminado.<br />- Intente mantener el documento lo más estable posible.<br />- Mantenga el documento dentro del marco hasta que salga el tick verde.",
+            "title": "Cómo capturar el documento"
+          }
+        },
+        "reverse": {
+          "subtitle": "Muestre la parte trasera del documento a cámara.",
+          "title": "Parte trasera",
+          "helpModal": {
+            "desktopMediaAltText": "Persona mostrando la parte trasera del documento a la cámara del ordenador.",
+            "mobileMediaAltText": "Persona mostrando la parte trasera del documento a la cámara trasera del móvil",
+            "subtitle": "Para realizar la captura de documento correctamente, siga las siguientes indicaciones:<br />- Coloque el documento de forma centrada en el marco.<br />- Evite que el documento presente reflejos.<br />- Evite tapar datos con el dedo o de otra forma.<br />- Asegúrese de estar en un espacio bien iluminado.<br />- Intente mantener el documento lo más estable posible.<br />- Mantenga el documento dentro del marco hasta que salga el tick verde.",
+            "title": "Cómo capturar el documento"
+          }
+        }
+      },
+      "error": {
+        "cameraNotDetected": {
+          "desktopMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+          "mobileMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+          "subtitle": "Por favor, compruebe que su dispositivo cuenta con cámara para continuar con el proceso.",
+          "title": "No se ha detectado cámara"
+        },
+        "dependencies": {
+          "button": "Reintentar",
+          "desktopMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+          "mobileMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+          "subtitle": "Hemos encontrado un problema al cargar algunos recursos. Inténtelo de nuevo y, si el error persiste, revise su configuración.",
+          "title": "¡Ups! Algo ha ido mal"
+        },
+        "permission": {
+          "desktopMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+          "mobileMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+          "subtitle": "No podemos acceder a su cámara o micrófono. Active los permisos desde los ajustes de su dispositivo o navegador para continuar con la verificación.",
+          "title": "Permisos necesarios"
+        },
+        "rotation": {
+          "desktopMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+          "mobileMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+          "subtitle": "Para continuar, cambie la orientación de su dispositivo.",
+          "title": "Gire su dispositivo"
+        },
+        "rotationRestart": {
+          "button": "Reiniciar",
+          "desktopMediaAltText": "Imagen de error mostrando un dispositivo siendo girado.",
+          "mobileMediaAltText": "Imagen de error mostrando un móvil siendo girado.",
+          "subtitle": "No se ha podido completar el proceso debido a un cambio de orientación inesperado del dispositivo.",
+          "title": "Reinicie el proceso"
+        },
+        "timeOut": {
+          "button": "Reintentar",
+          "desktopMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+          "mobileMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+          "subtitle": "No se ha completado el proceso a tiempo. Inténtelo de nuevo asegurándose de seguir las instrucciones.",
+          "title": "Tiempo límite superado"
+        },
+        "verification": {
+          "button": "Reintentar",
+          "leaveButton": "Salir del proceso",
+          "desktopMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+          "mobileMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+          "subtitle": "El proceso de verificación no ha podido ser completado. Por favor, pruebe de nuevo.",
+          "title": "Ha ocurrido un error"
+        },
+        "cameraActivationFailed": {
+          "desktopMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+          "mobileMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+          "subtitle": "Algo ha impedido que la cámara se inicie correctamente. Compruebe que no esté siendo usada por otra aplicación y vuelva a intentarlo.",
+          "title": "No se ha podido activar la cámara"
+        },
+        "focusLoss": {
+          "button": "Reiniciar",
+          "desktopMediaAltText": "Imagen de error mostrando un dispositivo perdiendo el foco.",
+          "mobileMediaAltText": "Imagen de error mostrando un móvil perdiendo el foco.",
+          "subtitle": "Por seguridad, la verificación se ha detenido al detectar un cambio de aplicación o pestaña. Reinicia el proceso para continuar con la verificación.",
+          "title": "El proceso se ha interrumpido"
+        }
+      },
+      "instructions": {
+        "obverse": {
+          "cancelButton": "Cancelar",
+          "desktopMediaAltText": "Persona sosteniendo un documento de identidad frente a la cámara del ordenador.",
+          "mobileMediaAltText": "Móvil enfocando un documento de identidad con la cámara trasera.",
+          "startButton": "Comenzar",
+          "subtitle": "Encuadre su documento en el rectángulo y la captura se realizará de forma automática.",
+          "title": "Verifique su documento"
+        },
+        "reverse": {
+          "cancelButton": "Cancelar",
+          "continueButton": "Continuar",
+          "desktopMediaAltText": "Documento de identidad siendo girado para mostrar el reverso.",
+          "mobileMediaAltText": "Documento de identidad siendo girado para mostrar el reverso.",
+          "subtitle": "Muestre la parte trasera del documento a cámara.",
+          "title": "Gire su documento y capture la parte trasera"
+        }
+      },
+      "review": {
+        "mediaAltText": "Imagen del documento capturado previamente.",
+        "obverse": {
+          "continueButton": "Continuar",
+          "repeatButton": "Repetir",
+          "subtitle": "Asegúrese de que no hay brillos, los datos no están tapados y se leen correctamente.",
+          "title": "Revise el documento"
+        },
+        "reverse": {
+          "continueButton": "Continuar",
+          "repeatButton": "Repetir",
+          "subtitle": "Asegúrese de que no hay brillos, los datos no están tapados y se leen correctamente.",
+          "title": "Revise la foto"
+        }
+      }
+    }
+  ],
+  "selfie": {
+    "capture": {
+      "active": {
+        "subtitle": "Mueva la cabeza en la dirección de la flecha",
+        "title": "Realice el movimiento y vuelva al centro",
+        "helpModal": {
+          "desktopMediaAltText": "Persona moviendo la cabeza hacia el lado indicado.",
+          "mobileMediaAltText": "Persona moviendo la cabeza hacia el lado indicado",
+          "subtitle": "Para realizar el proceso correctamente, siga las siguientes indicaciones:<br />- Mueva la cabeza hacia el lado que indica la flecha y/o las instrucciones (arriba, abajo, izquierda o derecha) y vuelva al centro una vez oiga el sonido o se ponga en verde.<br />- Mueva la cabeza a una velocidad media (ni deprisa ni muy despacio).<br />- Asegúrese de estar en un espacio iluminado y no estar a contraluz. ",
+          "title": "Realice el movimiento y vuelva al centro"
+        }
+      },
+      "cameraLoading": {
+        "title": "Cargando...",
+        "altText": ""
+      },
+      "feedback": {
+        "backCenter": "Vuelva al centro",
+        "centerFace": "Centre su rostro",
+        "getCloser": "Acérquese",
+        "lookDown": "Mueva la cabeza hacia abajo",
+        "lookUp": "Mueva la cabeza hacia arriba",
+        "moveAway": "Aléjese",
+        "staySteady": "Manténgase estable y no sonría.",
+        "successfulCapture": "Cara capturada correctamente",
+        "turnLeft": "Mueva la cabeza hacia la izquierda",
+        "turnRight": "Mueva la cabeza hacia la derecha"
+      },
+      "passive": {
+        "subtitle": "Mantenga una expresión natural y no sonría.",
+        "title": "Centre el rostro en el círculo",
+        "helpModal": {
+          "desktopMediaAltText": "Persona con la cara centrada en el círculo. ",
+          "mobileMediaAltText": "Persona con la cara centrada en un círculo. ",
+          "subtitle": "Para realizar la foto correctamente, siga las siguientes indicaciones:<br />- Evite estar a contraluz o en espacios poco iluminados.<br />- Asegúrese de que su cara se ve completa, sin accesorios que puedan tapar zonas de la cara (gafas de sol, gorras, bufandas, etc).<br />- Mantenga una expresión natural <br />- Intente mantener el documento lo más estable posible.",
+          "title": "Cómo capturar la foto"
+        }
+      }
+    },
+    "error": {
+      "cameraNotDetected": {
+        "desktopMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+        "mobileMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+        "subtitle": "Por favor, compruebe que su dispositivo cuenta con cámara para continuar con el proceso.",
+        "title": "No se ha detectado cámara"
+      },
+      "dependencies": {
+        "button": "Reintentar",
+        "desktopMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+        "mobileMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+        "subtitle": "Hemos encontrado un problema al cargar algunos recursos. Inténtelo de nuevo y, si el error persiste, revise su configuración.",
+        "title": "¡Ups! Algo ha ido mal"
+      },
+      "permission": {
+        "desktopMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+        "mobileMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+        "subtitle": "No podemos acceder a su cámara o micrófono. Active los permisos desde los ajustes de su dispositivo o navegador para continuar con la verificación.",
+        "title": "Permisos necesarios"
+      },
+      "rotation": {
+        "desktopMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+        "mobileMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+        "subtitle": "Para continuar, cambie la orientación de su dispositivo.",
+        "title": "Gire su dispositivo"
+      },
+      "rotationRestart": {
+        "button": "Reiniciar",
+        "desktopMediaAltText": "Imagen de error mostrando un dispositivo siendo girado.",
+        "mobileMediaAltText": "Imagen de error mostrando un móvil siendo girado.",
+        "subtitle": "No se ha podido completar el proceso debido a un cambio de orientación inesperado del dispositivo.",
+        "title": "Reintente el proceso"
+      },
+      "timeOut": {
+        "button": "Reintentar",
+        "desktopMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+        "mobileMediaAltText": "imagen de error que muestra un warning y un cable desenchufado.",
+        "subtitle": "No se ha completado el proceso a tiempo. Inténtelo de nuevo asegurándose de seguir las instrucciones.",
+        "title": "Tiempo límite superado"
+      },
+      "verification": {
+        "button": "Reintentar",
+        "leaveButton": "Salir del proceso",
+        "desktopMediaAltText": "Persona moviendo la cabeza hacia el lado indicado.",
+        "mobileMediaAltText": "Persona moviendo la cabeza hacia el lado indicado.",
+        "subtitle": "Parece que ha realizado un gesto distinto al indicado. Para continuar, siga la flecha con la cabeza a velocidad media y vuelva al centro cuando se indique o suene el sonido.",
+        "title": "Movimiento incorrecto"
+      },
+      "noMovementDetected": {
+        "button": "Reintentar",
+        "leaveButton": "Salir del proceso",
+        "desktopMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+        "mobileMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+        "subtitle": "Cuando aparezca la indicación en pantalla, mueva la cabeza hacia el lado correspondiente y vuelva al centro cuando se le indique o al escuchar el sonido.",
+        "title": "No se ha detectado ningún movimiento"
+      },
+      "cameraActivationFailed": {
+        "desktopMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+        "mobileMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+        "subtitle": "Algo ha impedido que la cámara se inicie correctamente. Compruebe que no esté siendo usada por otra aplicación y vuelva a intentarlo.",
+        "title": "No se ha podido activar la cámara"
+      },
+      "focusLoss": {
+        "button": "Reiniciar",
+        "desktopMediaAltText": "Imagen de error mostrando un dispositivo perdiendo el foco.",
+        "mobileMediaAltText": "Imagen de error mostrando un móvil perdiendo el foco.",
+        "subtitle": "Por seguridad, la verificación se ha detenido al detectar un cambio de aplicación o pestaña. Reinicia el proceso para continuar con la verificación.",
+        "title": "El proceso se ha interrumpido"
+      }
+    },
+    "instructions": {
+      "active": {
+        "desktopMediaAltText": "Persona moviendo la cabeza hacia el lado indicado.",
+        "mobileMediaAltText": "Persona moviendo la cabeza hacia el lado indicado.",
+        "subtitle": "Realice el movimiento hasta que se ponga en verde y suene el sonido.",
+        "title": "Mueva la cabeza hacia el lado señalado"
+      },
+      "backButton": "Atrás",
+      "cancelButton": "Cancelar",
+      "nextButton": "Siguiente",
+      "passive": {
+        "desktopMediaAltText": "Persona frente a un ordenador con su cabeza centrada delante de la cámara.",
+        "mobileMediaAltText": "Persona sujetando el móvil frente a la cámara frontal del móvil.",
+        "subtitle": "Asegúrese de no llevar gafas de sol, gorras u otros elementos que tapen su cara.",
+        "title": "Tome una foto de su rostro"
+      },
+      "startButton": "Comenzar"
+    },
+    "review": {
+      "continueButton": "Continuar",
+      "mediaAltText": "Imagen de la foto que se ha tomado de la cara.",
+      "repeatButton": "Repetir",
+      "subtitle": "Asegúrese de que la foto no está borrosa y tiene una expresión natural.",
+      "title": "Revise la foto"
+    }
+  },
+  "video": {
+    "capture": {
+      "cameraLoading": {
+        "title": "Cargando...",
+        "altText": ""
+      },
+      "documentStep": {
+        "feedback": {
+          "centerDocument": "Centre el documento",
+          "getCloser": "Acerque el documento",
+          "moveAway": "Aleje el documento",
+          "staySteady": "Manténgase estable",
+          "successfulCapture": "Captura realizada correctamente. "
+        },
+        "obverse": {
+          "title": "Muestre la parte delantera",
+          "helpModal": {
+            "desktopMediaAltText": "Persona mostrando el documento a la cámara frontal del ordenador.",
+            "mobileMediaAltText": "Persona mostrando el documento frente a la cámara delantera del móvil.",
+            "subtitle": "Sigue los siguientes pasos:<br />- Muestra el documento frente a la cámara delantera del móvil.<br />- Acércalo hasta colocarlo dentro del marco de la pantalla.<br />- Espera a que aparezca el tick.",
+            "title": "Cómo mostrar el documento en el video"
+          }
+        },
+        "reverse": {
+          "title": "Muestre la parte trasera",
+          "helpModal": {
+            "desktopMediaAltText": "Persona mostrando el documento a la cámara frontal del ordenador.",
+            "mobileMediaAltText": "Persona mostrando el documento frente a la cámara delantera del móvil.",
+            "subtitle": "Sigue los siguientes pasos:<br />- Muestra el documento frente a la cámara delantera del móvil.<br />- Acércalo hasta colocarlo dentro del marco de la pantalla.<br />- Espera a que aparezca el tick.",
+            "title": "Cómo mostrar el documento en el video"
+          }
+        }
+      },
+      "nameSurnameStep": {
+        "feedback": "Diga su nombre y apellidos",
+        "title": "Diga su nombre y apellidos en voz alta"
+      },
+      "selfieStep": {
+        "feedback": {
+          "centerFace": "Centre el rostro en el círculo",
+          "getCloser": "Acerque el rostro a la cámara",
+          "moveAway": "Aleje el rostro de la cámara",
+          "staySteady": "Manténgase estable y no sonría",
+          "successfulCapture": "Cara capturada correctamente"
+        },
+        "title": "Centre el rostro en el círculo",
+        "helpModal": {
+          "desktopMediaAltText": "Persona con su cara centrada en el círculo de la pantalla.",
+          "mobileMediaAltText": "Persona con su cara centrada en el círculo de la pantalla.",
+          "subtitle": "Colóquese con su rostro en el centro del círculo que aparece en pantalla. </br></br>*Al cerrar esta ventana de ayuda, el proceso se reiniciará por motivos de seguridad.",
+          "title": "Cómo colocar su cara en el vídeo"
+        }
+      }
+    },
+    "error": {
+      "cameraNotDetected": {
+        "desktopMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+        "mobileMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+        "subtitle": "Por favor, compruebe que su dispositivo cuenta con cámara para continuar con el proceso.",
+        "title": "No se ha detectado cámara"
+      },
+      "dependencies": {
+        "button": "Reintentar",
+        "desktopMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+        "mobileMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+        "subtitle": "Hemos encontrado un problema al cargar algunos recursos. Inténtelo de nuevo y, si el error persiste, revise su configuración.",
+        "title": "¡Ups! Algo ha ido mal"
+      },
+      "permission": {
+        "desktopMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+        "mobileMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+        "subtitle": "No podemos acceder a su cámara o micrófono. Active los permisos desde los ajustes de su dispositivo o navegador para continuar con la verificación.",
+        "title": "Permisos necesarios"
+      },
+      "rotation": {
+        "desktopMediaAltText": "Imagen de error mostrando un móvil siendo girado.",
+        "mobileMediaAltText": "Imagen de error mostrando un móvil siendo girado.",
+        "subtitle": "Para continuar, cambie la orientación de su dispositivo.",
+        "title": "Gire su dispositivo"
+      },
+      "rotationRestart": {
+        "button": "Reiniciar",
+        "desktopMediaAltText": "Imagen de error mostrando un dispositivo siendo girado.",
+        "mobileMediaAltText": "Imagen de error mostrando un móvil siendo girado",
+        "subtitle": "No se ha podido completar el proceso debido a un cambio de orientación inesperado del dispositivo",
+        "title": "Reinicie el proceso"
+      },
+      "timeOut": {
+        "desktopMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+        "mobileMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+        "subtitle": "No se ha completado el proceso a tiempo. Inténtelo de nuevo asegurándose de seguir las instrucciones.",
+        "title": "Tiempo límite superado"
+      },
+      "verification": {
+        "button": "Reintentar",
+        "leaveButton": "Salir del proceso",
+        "desktopMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+        "mobileMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+        "subtitle": "El proceso de verificación no ha podido ser completado. Por favor, pruebe de nuevo.",
+        "title": "Ha ocurrido un error"
+      },
+      "cameraActivationFailed": {
+        "desktopMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+        "mobileMediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
+        "subtitle": "Algo ha impedido que la cámara se inicie correctamente. Compruebe que no esté siendo usada por otra aplicación y vuelva a intentarlo.",
+        "title": "No se ha podido activar la cámara"
+      },
+      "focusLoss": {
+        "button": "Reiniciar",
+        "desktopMediaAltText": "Imagen de error mostrando un dispositivo perdiendo el foco.",
+        "mobileMediaAltText": "Imagen de error mostrando un móvil perdiendo el foco.",
+        "subtitle": "Por seguridad, la verificación se ha detenido al detectar un cambio de aplicación o pestaña. Reinicia el proceso para continuar con la verificación.",
+        "title": "El proceso se ha interrumpido"
+      }
+    },
+    "instructions": {
+      "firstStep": {
+        "cancelButton": "Cancelar",
+        "desktopMediaAltText": "Persona enfrente de la cámara delantera del ordenador.",
+        "mobileMediaAltText": "Persona sujetando el móvil frente a la cámara delantera del móvil.",
+        "nextButton": "Siguiente",
+        "subtitle": "Coloque el rostro dentro del círculo y pronuncie su nombre y apellidos cuando se indique en pantalla.",
+        "title": "Paso 1: Centre su cara y diga su nombre y apellidos"
+      },
+      "secondStep": {
+        "backButton": "Atrás",
+        "desktopMediaAltText": "Persona sosteniendo un documento de identidad frente a la cámara del ordenador.",
+        "mobileMediaAltText": "Persona mostrando el documento de identidad a la cámara delantera del teléfono.",
+        "startButton": "Comenzar",
+        "subtitle": "Muestre ambas caras del documento a cámara y asegúrese de que los datos sean claramente visibles.",
+        "title": "Paso 2: Muestre su documento de identidad"
+      }
+    }
+  }
+}

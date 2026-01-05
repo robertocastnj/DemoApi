@@ -1,0 +1,161 @@
+{
+  "logo": "https://example.com/logo.png",
+  "logoSmall": "https://upload.wikimedia.org/wikipedia/en/8/80/Wikipedia-logo-v2.svg",
+  "processResult": {
+    "error": {
+      "desktop": "https://example.com/error-desktop.png",
+      "mobile": "https://example.com/error-mobile.png"
+    },
+    "success": {
+      "desktop": "https://example.com/success-desktop.png",
+      "mobile": "https://example.com/success-mobile.png"
+    }
+  },
+  "document": [
+    {
+      "step": 1,
+      "instructions": {
+        "desktopObverse": "https://example.com/desktop-obverse.png",
+        "desktopReverse": "https://example.com/desktop-reverse.png",
+        "mobileObverse": "https://example.com/mobile-obverse.png",
+        "mobileReverse": "https://example.com/mobile-reverse.png"
+      },
+      "error": {
+        "cameraNotDetected": {
+          "desktop": "https://example.com/error-desktop.png",
+          "mobile": "https://example.com/error-mobile.png"
+        },
+        "dependencies": {
+          "desktop": "https://example.com/error-desktop.png",
+          "mobile": "https://example.com/error-mobile.png"
+        },
+        "permission": {
+          "desktop": "https://example.com/error-desktop.png",
+          "mobile": "https://example.com/error-mobile.png"
+        },
+        "rotation": {
+          "desktop": "https://example.com/error-desktop.png",
+          "mobile": "https://example.com/error-mobile.png"
+        },
+        "timeOut": {
+          "desktop": "https://example.com/error-desktop.png",
+          "mobile": "https://example.com/error-mobile.png"
+        },
+        "cameraActivationFailed": {
+          "desktop": "https://example.com/error-desktop.png",
+          "mobile": "https://example.com/error-mobile.png"
+        },
+        "focusLoss": {
+          "desktop": "https://example.com/error-desktop.png",
+          "mobile": "https://example.com/error-mobile.png"
+        }
+      },
+      "capture": {
+        "helpModal": {
+          "desktop": "https://example.com/help-modal-desktop.png",
+          "mobile": "https://example.com/help-modal-mobile.png"
+        }
+      }
+    }
+  ],
+  "selfie": {
+    "instructions": {
+      "desktopPassive": "https://example.com/desktop-selfie.png",
+      "desktopActive": "https://example.com/desktop-selfie-active.png",
+      "mobilePassive": "https://example.com/mobile-selfie.png",
+      "mobileActive": "https://example.com/mobile-selfie-active.png"
+    },
+    "error": {
+      "cameraNotDetected": {
+        "desktop": "https://example.com/error-desktop.png",
+        "mobile": "https://example.com/error-mobile.png"
+      },
+      "dependencies": {
+        "desktop": "https://example.com/error-desktop.png",
+        "mobile": "https://example.com/error-mobile.png"
+      },
+      "permission": {
+        "desktop": "https://example.com/error-desktop.png",
+        "mobile": "https://example.com/error-mobile.png"
+      },
+      "rotation": {
+        "desktop": "https://example.com/error-desktop.png",
+        "mobile": "https://example.com/error-mobile.png"
+      },
+      "timeOut": {
+        "desktop": "https://example.com/error-desktop.png",
+        "mobile": "https://example.com/error-mobile.png"
+      },
+      "verification": {
+        "desktop": "https://example.com/error-desktop.png",
+        "mobile": "https://example.com/error-mobile.png"
+      },
+      "noMovementDetected": {
+        "desktop": "https://example.com/error-desktop.png",
+        "mobile": "https://example.com/error-mobile.png"
+      },
+      "cameraActivationFailed": {
+        "desktop": "https://example.com/error-desktop.png",
+        "mobile": "https://example.com/error-mobile.png"
+      },
+      "focusLoss": {
+        "desktop": "https://example.com/error-desktop.png",
+        "mobile": "https://example.com/error-mobile.png"
+      }
+    },
+    "capture": {
+      "helpModal": {
+        "desktop": "https://example.com/help-modal-desktop.png",
+        "mobile": "https://example.com/help-modal-mobile.png"
+      }
+    }
+  },
+  "video": {
+    "instructions": {
+      "desktopSelfie": "https://example.com/desktop-selfie.png",
+      "desktopDocument": "https://example.com/desktop-document.png",
+      "mobileSelfie": "https://example.com/mobile-selfie.png",
+      "mobileDocument": "https://example.com/mobile-document.png"
+    },
+    "error": {
+      "cameraNotDetected": {
+        "desktop": "https://example.com/error-desktop.png",
+        "mobile": "https://example.com/error-mobile.png"
+      },
+      "dependencies": {
+        "desktop": "https://example.com/error-desktop.png",
+        "mobile": "https://example.com/error-mobile.png"
+      },
+      "permission": {
+        "desktop": "https://example.com/error-desktop.png",
+        "mobile": "https://example.com/error-mobile.png"
+      },
+      "rotation": {
+        "desktop": "https://example.com/error-desktop.png",
+        "mobile": "https://example.com/error-mobile.png"
+      },
+      "timeOut": {
+        "desktop": "https://example.com/error-desktop.png",
+        "mobile": "https://example.com/error-mobile.png"
+      },
+      "verification": {
+        "desktop": "https://example.com/error-desktop.png",
+        "mobile": "https://example.com/error-mobile.png"
+      },
+      "cameraActivationFailed": {
+        "desktop": "https://example.com/error-desktop.png",
+        "mobile": "https://example.com/error-mobile.png"
+      },
+      "focusLoss": {
+        "desktop": "https://example.com/error-desktop.png",
+        "mobile": "https://example.com/error-mobile.png"
+      }
+    },
+    "capture": {
+      "helpModal": {
+        "desktop": "https://example.com/help-modal-desktop.png",
+        "mobile": "https://example.com/help-modal-mobile.png"
+      }
+    }
+  }
+}
