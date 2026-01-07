@@ -50,11 +50,11 @@
         "title": "Ha ocurrido un error"
       },
       "obverse": {
-        "bodyText": "Ha ocurrido un error en la captura de la parte frontal del documento.",
+        "bodyText": "La captura frontal no se realizó correctamente. Por favor, repite el proceso para continuar.",
         "title": "Error en la captura de la parte frontal"
       },
       "reverse": {
-        "bodyText": "Ha ocurrido un error en la captura de la parte trasera del documento.",
+        "bodyText": "La captura trasera no se realizó correctamente. Por favor, repite el proceso para continuar.",
         "title": "Error en la captura de la parte trasera"
       }
     },
@@ -115,7 +115,7 @@
   "processResult": {
     "error": {
       "mediaAltText": "Imagen de error que muestra un warning y un cable desenchufado.",
-      "subtitle": "Ha ocurrido un error durante el proceso de verificación de identidad y no se puede continuar",
+      "subtitle": "Ha ocurrido un error durante el proceso de verificación de identidad y no se puede continuar. Por favor recargue la página e inténtelo de nuevo.",
       "title": "¡Ups! Algo ha ido mal"
     },
     "success": {
