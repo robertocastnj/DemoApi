@@ -19,10 +19,16 @@ $configData = [
     "platform" => "web",
     "operationMode" => "idv",
     "flowSetup" => [
+        "stages" => ["selfie", "document"],
+           "options"=> [
+            "selfie" => [
+                "liveness" => "active",
+                "challengeLength" => 2                
+            ]
+        ],
         "core" => [
             "confirmProcess" => true
-        ],
-        "stages" => ["selfie", "document"]
+        ]
     ]
 ];
 
