@@ -52,12 +52,10 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from "vue";
 
-// --- CONFIGURACIÓN ---
 const backendBase = import.meta.env.VITE_BACKEND_URL; // http://localhost/DemoApi/public
 const iframeBase = import.meta.env.VITE_IFRAME_URL; // https://xpressid-web-work.us.veri-das.com/v3/
 const mode = import.meta.env.VITE_MODE; // sandbox
 
-// --- ESTADOS ---
 const iframeUrl = ref("");
 const loading = ref(false);
 const loadingMessage = ref("");
@@ -66,7 +64,6 @@ const qualityWarning = ref("");
 const result = ref(null);
 const hasError = ref(false);
 
-// --- FUNCIÓN PRINCIPAL: INICIAR PROCESO ---
 const startProcess = async () => {
   loading.value = true;
   loadingMessage.value = "Conectando con el servidor...";
@@ -74,13 +71,10 @@ const startProcess = async () => {
   errorMsg.value = "";
   result.value = null;
   hasError.value = false;
-  // No limpiamos qualityWarning aquí para que el usuario siga viendo el mensaje mientras carga el nuevo
 
   try {
-    // 1. Verificar permisos de cámara antes de pedir token
     await navigator.mediaDevices.getUserMedia({ video: true });
 
-    // 2. Pedir Token al Backend (PHP)
     loadingMessage.value = "Generando sesión segura...";
     const url = `${backendBase}/api_veridas/token.php`;
 
@@ -98,16 +92,14 @@ const startProcess = async () => {
       throw new Error(data.error || "No se recibió el token de acceso.");
     }
 
-    // 3. Cargar Iframe con el token nuevo
     iframeUrl.value = `${iframeBase}?access_token=${data.access_token}&mode=${mode}`;
 
-    // Una vez cargado, limpiamos cualquier advertencia previa
     qualityWarning.value = "";
   } catch (e) {
     console.error(e);
     errorMsg.value = "Error: " + e.message;
     hasError.value = true;
-    qualityWarning.value = ""; // Si falla la conexión, quitamos la alerta de calidad
+    qualityWarning.value = "";
   } finally {
     loading.value = false;
   }
@@ -115,16 +107,13 @@ const startProcess = async () => {
 
 // --- MANEJADOR DE MENSAJES DEL IFRAME ---
 const handleMessage = (event) => {
-  // Filtro de seguridad: solo aceptar mensajes de Veridas
   if (!event.origin.includes("veri-das")) return;
 
   const data = event.data;
-  // Normalizamos dónde buscar el código (a veces viene en data, a veces en payload)
   const code = data.code || (data.payload && data.payload.code);
 
   console.log("Evento XpressID:", code);
 
-  // LISTA DE ERRORES QUE DEBEN CAUSAR REINICIO AUTOMÁTICO
   const qualityErrors = [
     "BlurredImageError", // Foto movida
     "GlareDetected", // Brillo/Flash
@@ -150,20 +139,16 @@ const handleMessage = (event) => {
     // 3. Programar el reinicio automático
     console.log(`Reiniciando por ${code} en 2.5 segundos...`);
     setTimeout(() => {
-      startProcess(); // <--- REINICIO AUTOMÁTICO
+      startProcess();
     }, 2500);
     return;
   }
 
-  // --- ÉXITO ---
   if (code === "ProcessCompleted" || data.event === "finish") {
     result.value = data.payload || data;
     iframeUrl.value = ""; // Cerramos iframe
     qualityWarning.value = "";
-  }
-
-  // Limpiar advertencia si pasa de etapa (ej. capturó bien documento)
-  else if (code === "DocumentCaptured" || code === "SelfieCaptured") {
+  } else if (code === "DocumentCaptured" || code === "SelfieCaptured") {
     qualityWarning.value = "";
   }
 };
@@ -219,7 +204,7 @@ onBeforeUnmount(() => window.removeEventListener("message", handleMessage));
   }
 }
 
-/* Alerta de Calidad (Amarilla) */
+/* Alerta de Calidad  */
 .quality-alert {
   background: #fefce8;
   color: #854d0e;
@@ -237,7 +222,7 @@ onBeforeUnmount(() => window.removeEventListener("message", handleMessage));
   font-size: 14px;
 }
 
-/* Error de Sistema (Rojo) */
+/* Error de Sistema  */
 .error-banner {
   background: #fee2e2;
   color: #991b1b;
@@ -246,7 +231,7 @@ onBeforeUnmount(() => window.removeEventListener("message", handleMessage));
   margin: 20px 0;
 }
 
-/* Éxito (Verde) */
+/* Éxito */
 .success-card {
   background: #dcfce7;
   color: #166534;
