@@ -40,7 +40,7 @@ $postFields = [
     'data'   => json_encode($configData),
 
     'texts'  => new CURLFile(__DIR__ . '/xpressid/texts/es.json', 'application/json'),
-    /* 'medias' => new CURLFile(__DIR__ . '/xpressid/medias/media.json', 'application/json'), */
+    'medias' => new CURLFile(__DIR__ . '/xpressid/medias/media.json', 'application/json'), 
     'styles' => new CURLFile(__DIR__ . '/xpressid/styles/styles.json', 'application/json'),
 ];
 
