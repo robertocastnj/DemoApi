@@ -52,7 +52,7 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from "vue";
 
-const backendBase = import.meta.env.VITE_BACKEND_URL; // http://localhost/DemoApi/public
+const backendBase = import.meta.env.VITE_BACKEND_URL; // }
 const iframeBase = import.meta.env.VITE_IFRAME_URL; // https://xpressid-web-work.us.veri-das.com/v3/
 const mode = import.meta.env.VITE_MODE; // sandbox
 
