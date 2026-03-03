@@ -22,5 +22,4 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-/.env
 /public/api_veridas/.env

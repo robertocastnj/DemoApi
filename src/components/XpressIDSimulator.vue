@@ -1,6 +1,6 @@
 <template>
   <div class="simulator">
-    <h2>Validación de Identidad (Oz Leasing)</h2>
+    <h2>Validación de Identidad</h2>
 
     <button
       v-if="!iframeUrl && !loading"
